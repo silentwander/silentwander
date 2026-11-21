@@ -1,0 +1,157 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1180" viewBox="0 0 1200 1180">
+  <defs>
+    <pattern id="paper" width="36" height="36" patternUnits="userSpaceOnUse">
+      <rect width="36" height="36" fill="#f2eee5"/>
+      <circle cx="5" cy="8" r=".65" fill="#b8afa0" opacity=".22"/>
+      <circle cx="25" cy="27" r=".55" fill="#b8afa0" opacity=".2"/>
+      <path d="M0 35.5H36" stroke="#d8d0c3" stroke-width=".45" opacity=".24"/>
+    </pattern>
+
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0V7" stroke="#272522" stroke-width=".65" opacity=".12"/>
+    </pattern>
+
+    <clipPath id="round">
+      <rect x="1" y="1" width="1198" height="1178" rx="22"/>
+    </clipPath>
+
+    <style>
+      .ink{fill:#242321}
+      .muted{fill:#716b62}
+      .red{fill:#793d42}
+      .serif{font-family:Georgia,'Times New Roman',serif}
+      .mono{font-family:'Courier New',monospace;letter-spacing:1.5px}
+      .body{font-family:Georgia,'Times New Roman',serif;font-size:20px;fill:#393631}
+      .small{font-family:'Courier New',monospace;font-size:13px;letter-spacing:1.5px;fill:#716b62}
+      .section{font-family:Georgia,'Times New Roman',serif;font-size:29px;fill:#242321}
+      .rule{stroke:#8d8579;stroke-width:1;opacity:.55}
+      .group{font-family:'Courier New',monospace;font-size:14px;letter-spacing:1px;fill:#793d42}
+      .item{font-family:Georgia,'Times New Roman',serif;font-size:19px;fill:#393631}
+    </style>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1200" height="1180" fill="url(#paper)"/>
+
+    <rect x="18" y="18" width="1164" height="1144" rx="14"
+      fill="none" stroke="#554f47" stroke-width="1.2" opacity=".7"/>
+
+    <rect x="27" y="27" width="1146" height="1126" rx="10"
+      fill="none" stroke="#a69c8d" stroke-width=".7" opacity=".7"/>
+
+    <!-- HEADER -->
+    <text x="62" y="76" class="small">PERSONAL PROFILE / 2026</text>
+    <text x="1138" y="76" text-anchor="end" class="small">SILENTWANDER</text>
+    <path d="M62 96H1138" class="rule"/>
+
+    <text x="62" y="145" class="serif ink" font-size="39">
+      A quiet space for learning and creating.
+    </text>
+
+    <text x="64" y="178" class="serif muted" font-size="18" font-style="italic">
+      Still finding my own way.
+    </text>
+
+    <circle cx="1090" cy="145" r="30" fill="none" stroke="#793d42" stroke-width="1.2"/>
+    <circle cx="1090" cy="145" r="23" fill="none" stroke="#793d42" stroke-width=".7"/>
+    <path d="M1061 145H1119M1090 116V174"
+      stroke="#793d42" stroke-width=".6" opacity=".6"/>
+
+    <!-- 01 ABOUT ME -->
+    <path d="M62 215H1138" class="rule"/>
+
+    <text x="64" y="253" class="small red">01 / ABOUT ME</text>
+
+    <text x="64" y="292" class="section">
+      Backend-focused developer in progress.
+    </text>
+
+    <text x="64" y="328" class="body">
+      I focus on backend development, with additional interest in frontend
+    </text>
+
+    <text x="64" y="357" class="body">
+      and working with data. I build Java applications and explore databases,
+    </text>
+
+    <text x="64" y="386" class="body">
+      APIs, Linux environments, debugging and collaborative development.
+    </text>
+
+    <path d="M1000 280q28 -24 56 0t56 0M1000 295q28 -24 56 0t56 0"
+      fill="none" stroke="#393631" stroke-width="1" opacity=".45"/>
+
+    <path d="M1010 315q20 -15 40 0t40 0t40 0"
+      fill="none" stroke="#793d42" stroke-width="1" opacity=".6"/>
+
+    <!-- 02 TECHNOLOGIES -->
+    <path d="M62 420H1138" class="rule"/>
+
+    <text x="64" y="459" class="small red">02 / TECHNOLOGIES</text>
+
+    <text x="64" y="498" class="section">
+      Tools, languages and infrastructure.
+    </text>
+
+    <text x="64" y="542" class="group">PROGRAMMING LANGUAGES</text>
+    <text x="64" y="574" class="item">Java · Python · C++</text>
+
+    <path d="M62 594H1138" class="rule"/>
+
+    <text x="64" y="630" class="group">DATABASES</text>
+    <text x="64" y="662" class="item">
+      PostgreSQL · pgAdmin · SQL schemas · PK/FK · Transactions
+    </text>
+    <text x="64" y="691" class="item">
+      Master–Replica · Streaming replication
+    </text>
+
+    <path d="M62 711H1138" class="rule"/>
+
+    <text x="64" y="747" class="group">BACKEND &amp; DEVELOPMENT</text>
+    <text x="64" y="779" class="item">
+      JavaFX · HTTP · REST API · Backend application development
+    </text>
+
+    <path d="M62 799H1138" class="rule"/>
+
+    <text x="64" y="835" class="group">DEVOPS &amp; TOOLS</text>
+    <text x="64" y="867" class="item">
+      Docker · Linux (Ubuntu) · Git · Figma
+    </text>
+    <text x="64" y="896" class="item">
+      Log analysis · Debugging · Troubleshooting
+    </text>
+
+    <!-- 03 CURRENTLY EXPLORING -->
+    <path d="M62 925H1138" class="rule"/>
+
+    <text x="64" y="964" class="small red">03 / CURRENTLY EXPLORING</text>
+
+    <text x="64" y="1003" class="section">
+      Beyond the code.
+    </text>
+
+    <text x="64" y="1042" class="item">
+      Computer Science · Computer Architecture
+    </text>
+
+    <text x="64" y="1072" class="item">
+      Artificial Intelligence · Neural Networks
+    </text>
+
+    <!-- 04 CONTACT -->
+    <path d="M62 1090H1138" class="rule"/>
+
+    <text x="64" y="1125" class="small red">04 / CONTACT</text>
+
+    <text x="300" y="1125" class="mono ink" font-size="14">
+      TELEGRAM @silentwander
+    </text>
+
+    <text x="720" y="1125" class="mono ink" font-size="14">
+      DISCORD sotky_nedam
+    </text>
+  </g>
+</svg>
