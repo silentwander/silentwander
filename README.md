@@ -6,9 +6,5 @@
 <br>
 
 <div align="center">
-  <i>Somewhere between thoughts and reality.</i>
-</div>
-
-<div align="center">
   <img src="./assets/images/about.png" width="100%" alt="About me — Still finding my own way">
 </div>
