@@ -1,0 +1,347 @@
+
+:root {
+    --background: #f4f2ed;
+    --foreground: #171717;
+    --muted: #77746e;
+    --line: rgba(23, 23, 23, 0.16);
+    --accent: #8d2929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* Film grain */
+
+.noise {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.13;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");
+}
+
+/* Header */
+
+.topbar {
+    height: 86px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    color: var(--foreground);
+    text-decoration: none;
+    font-family: "DM Mono", monospace;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    gap: 34px;
+}
+
+nav a,
+.availability {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.availability {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #668b68;
+    animation: blink 2s infinite;
+}
+
+/* Hero */
+
+.hero {
+    min-height: calc(100vh - 86px);
+    padding: 100px 12% 30px;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    position: relative;
+}
+
+.eyebrow,
+.section-number,
+.art-label,
+.art-index {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.hero h1 {
+    margin-top: 35px;
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: 1.08;
+    letter-spacing: -4px;
+    font-weight: 600;
+}
+
+.hero h1 span {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent);
+}
+
+.hero-description {
+    margin-top: 28px;
+    max-width: 390px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 42px;
+}
+
+.primary-link,
+.secondary-link {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+
+.primary-link {
+    padding: 17px 21px;
+    background: var(--foreground);
+    color: var(--background);
+    transition: background 0.3s;
+}
+
+.primary-link:hover {
+    background: var(--accent);
+}
+
+.primary-link span {
+    margin-left: 12px;
+}
+
+.secondary-link {
+    color: var(--muted);
+}
+
+/* Artwork */
+
+.hero-art {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    justify-self: end;
+}
+
+.art-placeholder {
+    aspect-ratio: 4 / 5;
+    margin-top: 18px;
+    background:
+        radial-gradient(ellipse at 50% 65%, #d2cec5 0%, transparent 55%),
+        linear-gradient(145deg, #e9e6df, #d9d5cc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+}
+
+.art-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0,0,0,0.035) 4px
+    );
+}
+
+.art-symbol {
+    font-family: Georgia, serif;
+    font-size: clamp(100px, 15vw, 190px);
+    color: rgba(20, 20, 20, 0.85);
+}
+
+.art-caption {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-family: "Great Vibes", cursive;
+    font-size: 27px;
+    line-height: 1.2;
+    color: #333;
+    text-align: right;
+}
+
+.art-index {
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* Hero footer */
+
+.hero-footer {
+    position: absolute;
+    bottom: 30px;
+    left: 12%;
+    right: 12%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--line);
+    padding-top: 15px;
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+}
+
+/* Content sections */
+
+.section {
+    padding: 110px 12%;
+    border-top: 1px solid var(--line);
+}
+
+.section h2 {
+    margin-top: 25px;
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 400;
+}
+
+.section p {
+    margin-top: 20px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.section a {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--accent);
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    padding: 25px 8%;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+/* Animation */
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+    .topbar {
+        padding: 0 6%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .availability {
+        font-size: 8px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 80px 7% 100px;
+        gap: 60px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-art {
+        justify-self: center;
+        max-width: 330px;
+    }
+
+    .hero-footer {
+        left: 7%;
+        right: 7%;
+        font-size: 7px;
+    }
+
+    .section {
+        padding: 80px 7%;
+    }
+
+    footer {
+        padding: 22px 7%;
+        font-size: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
